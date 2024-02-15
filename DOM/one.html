@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM learning</title>
+  </head>
+  <body>
+    <div class="bg-black">
+      <h1 id="heading" class="heading">DOM learning on Chai aur code</h1>
+      <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+
+    <span id="ratio"></span>
+    <br />
+    <span id="ratio2"></span>
+
+    <script>
+      function updateScreenSize() {
+        let height = screen.height;
+        let width = screen.width;
+        document.getElementById(
+          "ratio"
+        ).innerText = `Width = ${width}px & Height = ${height}px`;
+
+        let heigh1 = screen.availHeight;
+        let width1 = screen.availHeight;
+        document.getElementById(
+          "ratio2"
+        ).innerText = `width =${width}px and Height = ${heigh1}px `;
+      }
+
+      updateScreenSize();
+      window.addEventListener("resize",updateScreenSize)
+    </script>
+  </body>
+</html>
